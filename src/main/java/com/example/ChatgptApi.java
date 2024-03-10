@@ -45,6 +45,31 @@ public class ChatgptApi {
         String result = response.body();
         // System.out.println(result);
 
+        // result is:
+        // {
+        //    "id": "chatcmpl-91Gt5lxrA6SpuqYTsm6yOWuEdkz8c",
+        //    "object": "chat.completion",
+        //    "created": 1710090271,
+        //    "model": "gpt-3.5-turbo-0125",
+        //    "choices": [
+        //      {
+        //         "index": 0,
+        //        "message": {
+        //          "role": "assistant",
+        //          "content": "1+1 equals 2."
+        //        },
+        //        "logprobs": null,
+        //        "finish_reason": "stop"
+        //      }
+        //    ],
+        //    "usage": {
+        //      "prompt_tokens": 14,
+        //      "completion_tokens": 7,
+        //      "total_tokens": 21
+        //    },
+        //    "system_fingerprint": "fp_4f0b692a78"
+        //  }
+
         String jsonString = result; // assign your JSON String here
         JSONObject obj = new JSONObject(jsonString);
         JSONArray choices = obj.getJSONArray("choices");
