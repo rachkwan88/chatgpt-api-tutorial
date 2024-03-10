@@ -21,7 +21,9 @@ public class ChatgptApi {
 
     public String getAnswer(String question) {
 
-        // API Reference: https://platform.openai.com/docs/api-reference/authentication
+        // API Reference: 
+        // - https://platform.openai.com/docs/api-reference/authentication
+        // - https://platform.openai.com/docs/api-reference/chat/create
         
         String body = "{\n" +
                 "     \"model\": \"gpt-3.5-turbo\",\n" +
